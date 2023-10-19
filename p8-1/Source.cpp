@@ -5,10 +5,14 @@ using namespace std;
 int countVowel(string str);
 
 int main() {
-
-	cout << countVowel("lkjlkjlkjlkjlkjo")<<endl;
-	cout << countVowel("1 2 3");
-
+	string input;
+	while ( true ) {
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, input);
+		if (input == "Q")
+			break;
+		cout << "Vowel count: " << countVowel(input)<<endl;
+	}
 }
 
 int countVowel(string str) {
